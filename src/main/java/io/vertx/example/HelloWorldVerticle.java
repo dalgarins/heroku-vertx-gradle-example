@@ -11,6 +11,6 @@ public class HelloWorldVerticle extends AbstractVerticle {
   @Override
   public void start() {
     // Create an HTTP server which simply returns "Hello World!" to each request.
-    vertx.createHttpServer().requestHandler(req -> req.response().end("Hello World!")).listen(80);
+    vertx.createHttpServer().requestHandler(req -> req.response().end("Hello World!")).listen(Integer.getInteger("http.port"), System.getProperty("http.address", "0.0.0.0"));
   }
 }
