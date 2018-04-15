@@ -14,6 +14,18 @@ repositories {
 version = '3.5.1'
 sourceCompatibility = '1.8'
 mainClassName = 'io.vertx.core.Launcher'
+def mainVerticleName = 'io.vertx.example.HelloWorldVerticle'
+
+// Vert.x watches for file changes in all subdirectories
+// of src/ but only for files with .java extension
+def watchForChange = 'src/**/*.java'
+
+// Vert.x will call this task on changes
+def doOnChange = './gradlew classes'
+
+run {
+    args = ['run', mainVerticleName, "--redeploy=$watchForChange", "--launcher-class=$mainClassName", "--on-redeploy=$doOnChange"]
+}
 
 dependencies {
   compile "io.vertx:vertx-core:$version"
