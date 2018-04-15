@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dhttp.port=$PORT -jar build/libs/gradle-verticle-3.5.1.jar
+web: java -Dhttp.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
