@@ -1,1 +1,1 @@
-web: java -jar gradle-verticle-3.5.1-fat.jar
+web: java -jar build/libs/gradle-verticle-3.5.1-fat.jar

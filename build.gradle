@@ -31,7 +31,7 @@ shadowJar {
 }
 
 task copyToLib(type: Copy) {
-    into "$buildDir/libs"
+    into "$buildDir/lib"
     from(configurations.compile)
 }
 
