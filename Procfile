@@ -1,1 +1,1 @@
-web: java -Dhttp.port=80 $JAVA_OPTS -jar build/libs/*.jar
+web: java -jar build/libs/gradle-verticle-3.5.1-fat.jar

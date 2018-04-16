@@ -31,7 +31,7 @@ dependencies {
   compile "io.vertx:vertx-core:$version"
 }
 
-shadowJar {
+build {
   classifier = 'fat'
   manifest {
     attributes 'Main-Verticle': 'io.vertx.example.HelloWorldVerticle'
