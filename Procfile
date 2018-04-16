@@ -1,1 +1,1 @@
-web: java -jar build/lib/gradle-verticle-3.5.1-fat.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
