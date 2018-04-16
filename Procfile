@@ -1,1 +1,1 @@
-web: java -Dhttp.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
+web: java -Dhttp.port=8080 $JAVA_OPTS -jar build/libs/*.jar
